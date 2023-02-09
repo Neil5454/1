@@ -70,8 +70,6 @@ answer = input("Do you want to play a game of blackjack? Type 'y' or 'n'. ")
 if answer == 'y':
   game_running = True
   print(logo)
-  cumulative_cards_dealt = 0
-  card_counter = 0
   dealer_hits_soft = int(input("Dealer hits on soft 'x' (enter a number). "))
   cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
   instances_each_card = 4
@@ -81,7 +79,7 @@ if answer == 'y':
   random.shuffle(shoe)
   cards_in_shoe = len(shoe)
   shuffle_point = float(input("At what point would you like the shoe to be shuffled? (e.g. 75% of cards in the shoe have been dealt, insert as '75') ")) / 100
-  print(shoe)
+  card_counter = 0
   while game_running:
     your_cards = []
     dealer_cards = []
