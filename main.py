@@ -4,13 +4,11 @@
 import os, random, time
 from art import logo
 
-
 def deal_one_card():
   global card_counter
   one_card = shoe[card_counter]  # each card dealt corresponds with position in shoe (i.e., first card dealt is position "0" in shoe, second card dealt is position "1" in shoe, etc)
   card_counter += 1
   return one_card
-
 
 def your_actions():
   your_cards.append(deal_one_card())
