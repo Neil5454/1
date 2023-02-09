@@ -4,16 +4,12 @@
 import os, random, time
 from art import logo
 
-card_counter = 0
-
-
 def deal_one_card():
     global card_counter
-    one_card = shoe[
-        card_counter]  # each card dealt corresponds with position in shoe (i.e., first card dealt is position "0" in shoe, second card dealt is position "1" in shoe, etc)
+    one_card = shoe[card_counter]  # each card dealt corresponds with position in shoe (i.e., first card dealt is position "0" in shoe, second card dealt is position "1" in shoe, etc)
     card_counter += 1
     return one_card
-
+card_counter = 0
 
 def your_actions():
     your_cards.append(deal_one_card())
@@ -28,7 +24,6 @@ def your_actions():
             return your_actions()
         if hit_or_stand == 's':
             return dealer_actions()
-
 
 def dealer_actions():
     global dealer_total  #setting variable as global so it can be used in 'determine winner' function
